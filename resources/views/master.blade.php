@@ -183,6 +183,13 @@
             </span>
           </a>
         </li>
+        <li>
+          <a href="{{ url('users')}}">
+            <i class="fa fa-th"></i> <span>Users</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
     </section>
     <!-- /.sidebar -->
   </aside>

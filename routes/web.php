@@ -12,6 +12,7 @@ use App\Http\Controllers\PengembalianController;
 use App\Http\Controllers\MalasngodingController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -102,6 +103,14 @@ Route::post('pengembalian/edit/pengembalian/update',[PengembalianController::cla
 Route::get('pengembalian/hapus/{id}',[PengembalianController::class,'hapus']);
 Route::get('/pengembalian/cari',[PengembalianController::class,'cari']);
 
+//route CRUD Users
+Route::get('users',[UsersController::class,'index']);
+Route::get('users/tambah',[UsersController::class,'tambah']);
+Route::post('users/store',[UsersController::class,'store']);
+Route::get('users/edit/{id}',[UsersController::class,'edit']);
+Route::post('users/edit/users/update',[UsersController::class,'update']);
+Route::get('users/hapus/{id}',[UsersController::class,'hapus']);
+Route::get('users/cari',[UsersController::class,'cari']);
 Route::get('/input', [MalasngodingController::class,'input']);
 Route::post('/proses', [MalasngodingController::class,'proses']);
 
