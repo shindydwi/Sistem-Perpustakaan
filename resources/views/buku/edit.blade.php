@@ -22,35 +22,38 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title"><a href="{{ url('buku') }}"> Kembali</a></h3>
+              <h3 class="box-title"><a href="buku"> Kembali</a></h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-			<form action="{{ url('buku/store') }}" method="post">
+            @foreach($buku as $p)
+            <form action="buku/update" method="post">
+              {{ csrf_field() }}
+              <input type="hidden" name="id" value="{{ $p->id_buku }}"> <br/>
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputKode">Kode</label>
-                  <input type="kode_buku" class="form-control" id="exampleInputkode" placeholder="Kode Buku">
+                  <input type="text" required="required" name="kode_buku" value="{{ $p->kode_buku }}"class="form-control" id="exampleInputkode" placeholder="Kode Buku">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputjudul">Judul</label>
-                  <input type="judul_buku" class="form-control" id="exampleInputjudul" placeholder="Judul Buku">
+                  <input type="text" required="required" name="judul_buku" value="{{ $p->judul_buku }}"class="form-control" id="exampleInputjudul" placeholder="Judul Buku">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputpenulis">Penulis</label>
-                  <input type="penulis_buku" class="form-control" id="exampleInputpenulis" placeholder="Penulis Buku">
+                  <input type="text" required="required" name="penulis_buku" value="{{ $p->penulis_buku }}"class="form-control" id="exampleInputpenulis" placeholder="Penulis Buku">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputpenerbit">Penerbit</label>
-                  <input type="penerbit_buku" class="form-control" id="exampleInputpenerbit" placeholder="Penerbit Buku">
+                  <input type="text" required="required" name="penerbit_buku" value="{{$p->penerbit_buku}}"class="form-control" id="exampleInputpenerbit" placeholder="Penerbit Buku">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputtahunterbit">Tahun Terbit</label>
-                  <input type="tahun_terbit" class="form-control" id="exampleInputtahunterbit" placeholder="Tahun Terbit">
+                  <input type="text" required="required" name="tahun_terbit" value="{{$p->tahun_terbit}}"class="form-control" id="exampleInputtahunterbit" placeholder="Tahun Terbit">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputstok">Stok</label>
-                  <input type="stok" class="form-control" id="exampleInputstok" placeholder="Stok Buku">
+                  <input type="text" required="required" name="stok" value="{{ $p->stok }}"class="form-control" id="exampleInputstok" placeholder="Stok Buku">
                 </div>
 
               </div>
@@ -58,6 +61,7 @@
                 <button type="submit" class="btn btn-primary">Simpan Data</button>
               </div>
             </form>
+            @endforeach
           </div>
           <!-- /.box -->
 
