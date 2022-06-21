@@ -33,8 +33,7 @@
               </div>
               @endif
             </div>
-            <!-- /.box-header -->
-            <!-- form start -->
+
 			<form action="{{ url('rak/store') }}" method="post">
       {{ csrf_field() }}
               <div class="box-body">
@@ -59,7 +58,7 @@
               </div>
             </form>
           </div>
-          <!-- /.box -->
+          
 
 
 <!-- jQuery 3 -->
