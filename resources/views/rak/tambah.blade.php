@@ -23,32 +23,37 @@
           <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title"><a href="{{ url('rak') }}"> Kembali</a></h3>
+              @if (count($errors) > 0)
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+              @endif
             </div>
             <!-- /.box-header -->
             <!-- form start -->
 			<form action="{{ url('rak/store') }}" method="post">
+      {{ csrf_field() }}
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputidrak">Id Rak</label>
-                  <input type="id_rak" class="form-control" id="exampleInputidrak" placeholder="Id Rak">
+                  <input type="text" name="id_rak" class="form-control" id="exampleInputidrak" placeholder="Id Rak">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputnama">Nama</label>
-                  <input type="nama_rak" class="form-control" id="exampleInputnama" placeholder="Nama Rak">
+                  <input type="text" name="nama_rak" class="form-control" id="exampleInputnama" placeholder="Nama Rak">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputlokasi">Lokasi</label>
-                  <input type="lokasi_rak" class="form-control" id="exampleInputlokasi" placeholder="Lokasi Rak">
+                  <input type="text" name="lokasi_rak" class="form-control" id="exampleInputlokasi" placeholder="Lokasi Rak">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputid">Id Buku</label>
-                  <input type="id_buku" class="form-control" id="exampleInputid" placeholder="Id Buku">
+                  <input type="text" name="id_buku" class="form-control" id="exampleInputid" placeholder="Id Buku">
                 </div>
-				<div class="form-group">
-                  <label for="exampleInputtahunterbit">Tahun Terbit</label>
-                  <input type="tahun_terbit" class="form-control" id="exampleInputtahunterbit" placeholder="Tahun Terbit">
-                </div>
-              </div>
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan Data</button>
               </div>
