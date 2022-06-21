@@ -58,7 +58,7 @@
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan Data</button>
               </div>
-            </form>
+            </form> 
             @endforeach
           </div>
           <!-- /.box -->
