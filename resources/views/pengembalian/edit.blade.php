@@ -24,8 +24,7 @@
             <div class="box-header with-border">
               <h3 class="box-title"><a href="{{ url('pengembalian') }}"> Kembali</a></h3>
             </div>
-            <!-- /.box-header -->
-            <!-- form start -->
+
             @foreach($pengembalian as $p)
             <form action="pengembalian/update" method="post">
               {{ csrf_field() }}
@@ -61,7 +60,7 @@
             </form>
             @endforeach
           </div>
-          <!-- /.box -->
+          
 
 
 <!-- jQuery 3 -->
