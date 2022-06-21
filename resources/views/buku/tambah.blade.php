@@ -23,34 +23,44 @@
           <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title"><a href="{{ url('buku') }}"> Kembali</a></h3>
+              @if (count($errors) > 0)
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+          @endif
             </div>
             <!-- /.box-header -->
             <!-- form start -->
 			<form action="{{ url('buku/store') }}" method="post">
+      {{ csrf_field() }}
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputKode">Kode</label>
-                  <input type="kode_buku" class="form-control" id="exampleInputkode" placeholder="Kode Buku">
+                  <input type="text" name="kode_buku" class="form-control" id="exampleInputkode" placeholder="Kode Buku">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputjudul">Judul</label>
-                  <input type="judul_buku" class="form-control" id="exampleInputjudul" placeholder="Judul Buku">
+                  <input type="text" name="judul_buku" class="form-control" id="exampleInputjudul" placeholder="Judul Buku">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputpenulis">Penulis</label>
-                  <input type="penulis_buku" class="form-control" id="exampleInputpenulis" placeholder="Penulis Buku">
+                  <input type="text" name="penulis_buku" class="form-control" id="exampleInputpenulis" placeholder="Penulis Buku">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputpenerbit">Penerbit</label>
-                  <input type="penerbit_buku" class="form-control" id="exampleInputpenerbit" placeholder="Penerbit Buku">
+                  <input type="text" name="penerbit_buku" class="form-control" id="exampleInputpenerbit" placeholder="Penerbit Buku">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputtahunterbit">Tahun Terbit</label>
-                  <input type="tahun_terbit" class="form-control" id="exampleInputtahunterbit" placeholder="Tahun Terbit">
+                  <input type="text" name="tahun_terbit" class="form-control" id="exampleInputtahunterbit" placeholder="Tahun Terbit">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputstok">Stok</label>
-                  <input type="stok" class="form-control" id="exampleInputstok" placeholder="Stok Buku">
+                  <input type="text" name="stok" class="form-control" id="exampleInputstok" placeholder="Stok Buku">
                 </div>
 
               </div>

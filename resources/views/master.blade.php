@@ -148,13 +148,13 @@
             </span>
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a href="{{ url('petugas')}}">
             <i class="fa fa-th"></i> <span>Petugas</span>
             <span class="pull-right-container">
             </span>
           </a>
-        </li>
+        </li>/.sidebar -->
         <li>
           <a href="{{ url('anggota')}}">
             <i class="fa fa-th"></i> <span>Anggota</span>
@@ -191,7 +191,7 @@
           </a>
         </li>
     </section>
-    <!-- /.sidebar -->
+   
   </aside>
 
   
