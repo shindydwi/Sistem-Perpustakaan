@@ -23,34 +23,44 @@
           <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title"><a href="{{ url('/anggota') }}"> Kembali</a></h3>
+              @if (count($errors) > 0)
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+          @endif
             </div>
             <!-- /.box-header -->
             <!-- form start -->
 			<form action="{{ url('anggota/store') }}" method="post">
+      {{ csrf_field() }}
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputKode">Kode</label>
-                  <input type="kode_anggota" class="form-control" id="exampleInputkode" placeholder="Kode Anggota">
+                  <input type="text" name="kode_anggota" class="form-control" id="exampleInputkode" placeholder="Kode Anggota">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputNama">Nama</label>
-                  <input type="nama_anggota" class="form-control" id="exampleInputnama" placeholder="Nama Anggota">
+                  <input type="text" name="nama_anggota" class="form-control" id="exampleInputNama" placeholder="Nama Anggota">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputJk">Jenis Kelamin</label>
-                  <input type="jenis_kelamin" class="form-control" id="exampleInputjk" placeholder="Jenis Kelamin">
+                  <input type="text" name="jk_anggota" class="form-control" id="exampleInputJk" placeholder="Jenis Kelamin">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputjurusan">Jurusan</label>
-                  <input type="jurusan_anggota" class="form-control" id="exampleInputjurusan" placeholder="Jurusan Anggota">
+                  <input type="text" name="jurusan_anggota" class="form-control" id="exampleInputjurusan" placeholder="Jurusan Anggota">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputNoTelp">No Telp</label>
-                  <input type="no_telp_anggota" class="form-control" id="exampleInputpenerbit" placeholder="No Telpon Anggota">
+                  <input type="text" name="no_telp_anggota" class="form-control" id="exampleInputNoTelp" placeholder="No Telpon Anggota">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputalamat">Alamat</label>
-                  <input type="alamat_anggota" class="form-control" id="exampleInputalamat" placeholder="Alamat Anggota">
+                  <input type="text" name="alamat_anggota" class="form-control" id="exampleInputalamat" placeholder="Alamat Anggota">
                 </div>
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan Data</button>
