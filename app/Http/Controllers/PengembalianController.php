@@ -32,11 +32,11 @@ class PengembalianController extends Controller
     {
 		$this->validate($request,[
 			'id_pengembalian' => 'required|numeric',
-			'tanggal_pengembalian' => 'required|numeric',
-			'denda' => 'required|numeric',
-			'id_buku' => 'required|numeric',
-			'id_anggota' => 'required|numeric',
-			'id_petugas' => 'required|numeric',
+			'tanggal_pengembalian' => 'required',
+			'denda' => 'required',
+			'id_buku' => 'required',
+			'id_anggota' => 'required',
+			'id_petugas' => 'required',
 		 ]);
          // insert data ke table pengembalian
          DB::table('pengembalian')->insert([

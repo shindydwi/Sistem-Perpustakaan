@@ -32,7 +32,7 @@ class AnggotaController extends Controller
 			'jk_anggota' => 'required',
 			'jurusan_anggota' => 'required',
 			'no_telp_anggota' => 'required',
-			'alamat_anggota' =>'required'
+			'alamat_anggota' =>'required',
 		 ]);
 		DB::table('anggota')->insert([
 		'kode_anggota' => $request->kode_anggota,

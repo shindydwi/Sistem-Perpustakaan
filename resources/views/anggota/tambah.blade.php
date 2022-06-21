@@ -47,7 +47,7 @@
                   <input type="text" name="nama_anggota" class="form-control" id="exampleInputNama" placeholder="Nama Anggota">
                 </div>
 				<div class="form-group">
-                  <label for="exampleInputJk">Jenis Kelamin</label>
+                  <label for="exampleInputJk">JK Anggota</label>
                   <input type="text" name="jk_anggota" class="form-control" id="exampleInputJk" placeholder="Jenis Kelamin">
                 </div>
 				<div class="form-group">
