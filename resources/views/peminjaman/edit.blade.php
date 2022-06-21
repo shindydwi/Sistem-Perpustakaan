@@ -26,36 +26,40 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-			<form action="{{ url('peminjaman/store') }}" method="post">
+            @foreach($peminjaman as $p)
+            <form action="peminjaman/update" method="post">
+              {{ csrf_field() }}
+              <input type="hidden" name="id" value="{{ $p->id_peminjaman }}"> <br/>
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputId">Id Peminjaman</label>
-                  <input type="id_peminjaman" class="form-control" id="exampleInputId" placeholder="Id Peminjaman">
+                  <input type="text"required="required"name="id_peminjaman" value="{{ $p->id_peminjaman}}"class="form-control" id="exampleInputId" placeholder="Id Peminjaman">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputtanggalpinjam">Tanggal Pinjam</label>
-                  <input type="date" name="tanggal_pinjam" class="form-control" id="exampleInputtanggalpinjam" placeholder="Tanggal Pinjam">
+                  <input type="date" required="required"name="tanggal_pinjam" value="{{ $p->tanggal_pinjam}}"class="form-control" id="exampleInputtanggalpinjam" placeholder="Tanggal Pinjam">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputtanggalkembali">Tanggal Kembali</label>
-                  <input type="date" name="tanggal_kembali" class="form-control" id="exampleInputtanggalkembali" placeholder="Tanggal Kembali">
+                  <input type="date" required="required"name="tanggal_kembali" value="{{ $p->tanggal_kembali }}"class="form-control" id="exampleInputtanggalkembali" placeholder="Tanggal Kembali">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputidbuku">Id Buku</label>
-                  <input type="id_buku" class="form-control" id="exampleInputidbuku" placeholder="Id Buku">
+                  <input type="text"required="required"name="id_buku" value="{{ $p->id_buku}}"class="form-control" id="exampleInputidbuku" placeholder="Id Buku">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputidanggota">Id Anggota</label>
-                  <input type="id_anggota" class="form-control" id="exampleInputidanggota" placeholder="Id Anggota">
+                  <input type="text"required="required"name="id_anggota" value="{{ $p->id_anggota}}"class="form-control" id="exampleInputidanggota" placeholder="Id Anggota">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputidpetugas">Id Petugas</label>
-                  <input type="id_petugas" class="form-control" id="exampleInputidpetugas" placeholder="Id Petugas">
+                  <input type="text"required="required"name="id_petugas" value="{{ $p->id_petugas}}"class="form-control" id="exampleInputidpetugas" placeholder="Id Petugas">
                 </div>
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan Data</button>
               </div>
             </form>
+            @endforeach
           </div>
           <!-- /.box -->
 

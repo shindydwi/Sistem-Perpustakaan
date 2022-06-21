@@ -32,8 +32,8 @@ class PeminjamanController extends Controller
 	 {
 		 $this->validate($request,[
 		'id_peminjaman' => 'required',
-		'tanggal_pinjam' => 'required|numeric',
-		'tanggal_kembali' => 'required|numeric',
+		'tanggal_pinjam' => 'required',
+		'tanggal_kembali' => 'required',
 		'id_buku' => 'required',
 		'id_anggota' => 'required',
 		'id_petugas' =>'required'

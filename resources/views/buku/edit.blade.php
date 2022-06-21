@@ -22,7 +22,7 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title"><a href="buku"> Kembali</a></h3>
+              <h3 class="box-title"><a href="{{ url('buku') }}"> Kembali</a></h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
