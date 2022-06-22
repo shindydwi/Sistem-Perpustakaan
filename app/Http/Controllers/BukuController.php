@@ -15,7 +15,7 @@ class BukuController extends Controller
     public function index()
     {
     	// mengambil data dari table buku
-    	$buku = DB::table('buku')->paginate(20);
+    	$buku = DB::table('buku')->paginate(4);
  
     	// mengirim data buku ke view index
     	return view('buku.index',['buku' => $buku]);

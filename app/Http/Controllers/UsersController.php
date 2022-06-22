@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
- 
+use Illuminate\Support\Facades\Hash;
  
 class UsersController extends Controller
 {
@@ -44,7 +44,7 @@ class UsersController extends Controller
 
 		'name' => $request->name,
 		'email' => $request->email,
-        'password' => $request->password,
+        'password' => Hash :: make($request->password),
 	    ]);
 	    // alihkan halaman ke halaman users
 	    return redirect('users');
@@ -66,7 +66,7 @@ class UsersController extends Controller
 		DB::table('users')->where('id',$request->id)->update([
 		'name' => $request->name,
 		'email' => $request->email,
-		'password' => $request->password,
+		'password' => Hash :: make($request->password),
 
 		]);
 		// alihkan halaman ke halaman users

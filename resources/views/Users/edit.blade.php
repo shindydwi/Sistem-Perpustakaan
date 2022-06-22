@@ -41,7 +41,7 @@
                 </div>
 				<div class="form-group">
                   <label for="exampleInputPassword">Password</label>
-                  <input type="text" required="required" name="password" value="{{ $p->password }}"class="form-control" id="exampleInputPassword" placeholder="Password">
+                  <input type="text" required="required" name="password" class="form-control" id="exampleInputPassword" placeholder="Password">
               </div>
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan Data</button>
