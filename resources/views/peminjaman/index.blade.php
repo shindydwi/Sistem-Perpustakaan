@@ -33,7 +33,7 @@
 						<input class="form-control"type="text" name="cari" placeholder="Cari peminjaman .." value="{{ old('cari') }}">
 						<input class="btn btn-primary ml-3"type="submit" value="CARI">
 					</form>
-            <!-- /.box-header -->
+
             <div class="box-body">
               <table class="table table-bordered">
                 <tr>
