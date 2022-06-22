@@ -4,7 +4,13 @@
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
 @section('konten')
-
+<style type="text/css">
+		.pagination li{
+			float: left;
+			list-style-type: none;
+			margin:5px;
+		}
+</style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -56,17 +62,11 @@
 	            @endforeach
               </table>
             </div>
-            <!-- /.box-body -->
-            <div class="box-footer clearfix">
-              <ul class="pagination pagination-sm no-margin pull-right">
-                <li><a href="#">&laquo;</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">&raquo;</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- /.box -->
+            Halaman : {{ $users->currentPage() }} <br/>
+            Jumlah Data : {{ $users->total() }} <br/>
+            Data Per Halaman : {{ $users->perPage() }} <br/>
+          
+          
+            {{ $users->links() }}
 
 @endsection
