@@ -13,7 +13,7 @@ class PeminjamanController extends Controller
     public function index()
     {
     	// mengambil data dari table peminjaman
-    	$Peminjaman = DB::table('peminjaman')->paginate(15);
+    	$Peminjaman = DB::table('peminjaman')->paginate(1);
  
     	// mengirim data peminjaman ke view index
     	return view('peminjaman.index',['peminjaman' => $Peminjaman]);

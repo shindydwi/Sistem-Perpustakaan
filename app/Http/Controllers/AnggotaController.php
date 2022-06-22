@@ -13,7 +13,7 @@ class AnggotaController extends Controller
     public function index()
     {
     	// mengambil data dari table anggotaa
-    	$anggota = DB::table('anggota')->paginate(20);
+    	$anggota = DB::table('anggota')->paginate(2);
  
     	// mengirim data anggota1 ke view index
     	return view('anggota.index',['anggota' => $anggota]);

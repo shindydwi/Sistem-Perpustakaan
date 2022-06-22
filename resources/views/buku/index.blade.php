@@ -10,7 +10,7 @@
 			list-style-type: none;
 			margin:5px;
 		}
-	</style>
+</style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -77,8 +77,6 @@
           
           
             {{ $buku->links() }}
- 
-
           <!-- /.box -->
 
 @endsection
