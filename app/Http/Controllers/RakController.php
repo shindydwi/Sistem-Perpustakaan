@@ -15,7 +15,7 @@ class RakController extends Controller
     public function index()
     {
     	// mengambil data dari table rak
-    	$rak = DB::table('rak')->paginate(15);
+    	$rak = DB::table('rak')->paginate(1);
  
     	// mengirim data rak ke view index
     	return view('rak.index',['rak' => $rak]);
