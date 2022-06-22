@@ -41,7 +41,7 @@ Route::get('anggota',[AnggotaController::class, 'index']);
 Route::get('/anggota/tambah',[AnggotaController::class,'tambah']);
 Route::post('/anggota/store',[AnggotaController::class,'store']);
 Route::get('/anggota/edit/{id}',[AnggotaController::class,'edit']);
-Route::post('/anggota/edit/{id}/anggota/update',[AnggotaController::class,'update']);
+Route::post('/anggota/update',[AnggotaController::class,'update']);
 Route::get('/anggota/hapus/{id}',[AnggotaController::class,'hapus']);
 
 //Route Menangkap Data Melalui URL

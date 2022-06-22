@@ -26,33 +26,32 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-			<form action="{{ url('rak/store') }}" method="post">
+            @foreach($rak as $p)
+            <form action="rak/update" method="post">
+              {{ csrf_field() }}
+              <input type="hidden" name="id" value="{{ $p->id_rak}}"> <br/>
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputidrak">Id Rak</label>
-                  <input type="id_rak" class="form-control" id="exampleInputidrak" placeholder="Id Rak">
+                  <input type="text" required="required" name="id_rak" value="{{ $p->id_rak }}"class="form-control" id="exampleInputidrak" placeholder="Id Rak">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputnama">Nama</label>
-                  <input type="nama_rak" class="form-control" id="exampleInputnama" placeholder="Nama Rak">
+                  <input type="text" required="required" name="nama_rak" value="{{ $p->nama_rak }}"class="form-control" id="exampleInputnama" placeholder="Nama Rak">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputlokasi">Lokasi</label>
-                  <input type="lokasi_rak" class="form-control" id="exampleInputlokasi" placeholder="Lokasi Rak">
+                  <input type="text" required="required" name="lokasi_rak" value="{{ $p->lokasi_rak }}"class="form-control" id="exampleInputlokasi" placeholder="Lokasi Rak">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputid">Id Buku</label>
-                  <input type="id_buku" class="form-control" id="exampleInputid" placeholder="Id Buku">
+                  <input type="text" required="required" name="id_buku" value="{{ $p->id_buku }}"class="form-control" id="exampleInputid" placeholder="Id Buku">
                 </div>
-				<div class="form-group">
-                  <label for="exampleInputtahunterbit">Tahun Terbit</label>
-                  <input type="tahun_terbit" class="form-control" id="exampleInputtahunterbit" placeholder="Tahun Terbit">
-                </div>
-              </div>
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan Data</button>
               </div>
             </form>
+            @endforeach
           </div>
           <!-- /.box -->
 

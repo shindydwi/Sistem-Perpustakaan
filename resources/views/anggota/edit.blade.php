@@ -27,29 +27,29 @@
             <!-- /.box-header -->
             <!-- form start -->
             @foreach($anggota as $p)
-            <form action="a/anggota/update" method="post">
+            <form action="/anggota/update" method="post">
               {{ csrf_field() }}
               <input type="hidden" name="id" value="{{ $p->id_anggota }}"> <br/>
               <div class="box-body">
                 <div class="form-group">
-                  <label for="exampleInputKode">Kode</label>
-                  <input type="text" required="required" name="kode_anggota" value="{{ $p->kode_anggota }}"class="form-control" id="exampleInputKode" placeholder="Kode Anggota">
+                  <label for="exampleInputkode">Kode</label>
+                  <input type="text" required="required" name="kode_anggota" value="{{ $p->kode_anggota }}"class="form-control" id="exampleInputkode" placeholder="Kode Anggota">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputNama">Nama</label>
-                  <input type="text" required="required" name="nama_anggota" value="{{ $p->nama_anggota }}"class="form-control" id="exampleInputNama" placeholder="Nama Anggota">
+                  <label for="exampleInputnama">Nama</label>
+                  <input type="text" required="required" name="nama_anggota" value="{{ $p->nama_anggota }}"class="form-control" id="exampleInputnama" placeholder="Nama Anggota">
                 </div>
 				<div class="form-group">
-                  <label for="exampleInputJk">Jenis Kelamin</label>
-                  <input type="text" required="required" name="jenis_kelamin" value="{{ $p->jk_anggota }}"class="form-control" id="exampleInputJk" placeholder="Jenis Kelamin">
+                  <label for="exampleInputjk">Jenis Kelamin</label>
+                  <input type="text" required="required" name="jk_anggota" value="{{ $p->jk_anggota }}"class="form-control" id="exampleInputjk" placeholder="Jenis Kelamin">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputjurusan">Jurusan</label>
                   <input type="text" required="required" name="jurusan_anggota" value="{{ $p->jurusan_anggota }}"class="form-control" id="exampleInputjurusan" placeholder="Jurusan Anggota">
                 </div>
 				<div class="form-group">
-                  <label for="exampleInputNoTelp">No Telp</label>
-                  <input type="text" required="required" name="no_telp_anggota" value="{{ $p->no_telp_anggota }}"class="form-control" id="exampleInputNoTelp" placeholder="No Telpon Anggota">
+                  <label for="exampleInputnotelp">No Telp</label>
+                  <input type="text" required="required" name="no_telp_anggota" value="{{ $p->no_telp_anggota }}"class="form-control" id="exampleInputnotelp" placeholder="No Telpon Anggota">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputalamat">Alamat</label>

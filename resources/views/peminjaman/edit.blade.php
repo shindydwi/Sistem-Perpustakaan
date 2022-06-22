@@ -32,8 +32,8 @@
               <input type="hidden" name="id" value="{{ $p->id_peminjaman }}"> <br/>
               <div class="box-body">
                 <div class="form-group">
-                  <label for="exampleInputId">Id Peminjaman</label>
-                  <input type="text"required="required"name="id_peminjaman" value="{{ $p->id_peminjaman}}"class="form-control" id="exampleInputId" placeholder="Id Peminjaman">
+                  <label for="exampleInputid">Id Peminjaman</label>
+                  <input type="text"required="required"name="id_peminjaman" value="{{ $p->id_peminjaman}}"class="form-control" id="exampleInputid" placeholder="Id Peminjaman">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputtanggalpinjam">Tanggal Pinjam</label>

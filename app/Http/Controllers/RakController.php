@@ -33,10 +33,10 @@ class RakController extends Controller
         public function store(Request $request)
     {
 		$this->validate($request,[
-			'id_rak' => 'required|numeric',
+			'id_rak' => 'required',
 			'nama_rak' => 'required',
 			'lokasi_rak' => 'required',
-			'id_buku' => 'required|numeric',
+			'id_buku' => 'required',
 		]);
 	    // insert data ke table rak
 	    DB::table('rak')->insert([
