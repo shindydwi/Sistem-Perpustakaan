@@ -13,7 +13,7 @@ class PengembalianController extends Controller
     public function index()
     {
     	// mengambil data dari table pengembalian
-    	$pengembalian = DB::table('pengembalian')->paginate(16);
+    	$pengembalian = DB::table('pengembalian')->paginate(1);
  
     	// mengirim data pengembalian ke view index
     	return view('pengembalian.index',['pengembalian' => $pengembalian]);
