@@ -29,18 +29,19 @@
             @foreach($users as $p)
 	          <form action="users/update" method="post">
 		        {{ csrf_field() }}
+            <input type="hidden" name="id" value="{{ $p->id }}"> <br/>
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputname">Name</label>
-                  <input type="name" value="{{ $p->name }}"class="form-control" id="exampleInputname" placeholder="Name Users">
+                  <input type="text" required="required" name="name" value="{{ $p->name }}"class="form-control" id="exampleInputname" placeholder="Name Users">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputEmail">Email</label>
-                  <input type="email" value="{{ $p->email }}"class="form-control" id="exampleInputEmail" placeholder="Email">
+                  <input type="text" required="required" name="email" value="{{ $p->email }}"class="form-control" id="exampleInputEmail" placeholder="Email">
                 </div>
 				<div class="form-group">
                   <label for="exampleInputPassword">Password</label>
-                  <input type="password" value="{{ $p->password }}"class="form-control" id="exampleInputPassword" placeholder="Password">
+                  <input type="text" required="required" name="password" value="{{ $p->password }}"class="form-control" id="exampleInputPassword" placeholder="Password">
               </div>
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan Data</button>
