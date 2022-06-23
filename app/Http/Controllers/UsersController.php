@@ -15,7 +15,7 @@ class UsersController extends Controller
     public function index()
     {
     	// mengambil data dari table buku
-    	$users = DB::table('users')->paginate(4);
+    	$users = DB::table('users')->paginate(1);
  
     	// mengirim data users ke view index
     	return view('users.index',['users' => $users]);
