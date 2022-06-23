@@ -39,14 +39,12 @@
                   <label for="exampleInputnama">Nama</label>
                   <input type="text" required="required" name="nama_anggota" value="{{ $p->nama_anggota }}"class="form-control" id="exampleInputnama" placeholder="Nama Anggota">
                 </div>
-                <!-- select -->
                 <div class="form-group">
                   <label>Jenis Kelamin</label>
-                  <select class="form-control">
-                    <option>Laki-laki</option>
-                    <option>Perempuan</option>
-                  </select>
-                </div>
+                <select class="form-control">
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+              </select>
 				<div class="form-group">
                   <label for="exampleInputjurusan">Jurusan</label>
                   <input type="text" required="required" name="jurusan_anggota" value="{{ $p->jurusan_anggota }}"class="form-control" id="exampleInputjurusan" placeholder="Jurusan Anggota">

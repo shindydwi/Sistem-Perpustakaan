@@ -47,11 +47,10 @@
                 </div>
                   <div class="form-group">
                   <label>Jenis kelamin</label>
-                  <select class="form-control">
-                    <option>Laki-laki</option>
-                    <option>Perempuan</option>
-                  </select>
-                </div>
+                <select class="form-control">
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+              </select>
 				<div class="form-group">
                   <label for="exampleInputjurusan">Jurusan</label>
                   <input type="text" name="jurusan_anggota" class="form-control" id="exampleInputjurusan" placeholder="Jurusan Anggota">
