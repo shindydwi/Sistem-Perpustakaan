@@ -39,9 +39,13 @@
                   <label for="exampleInputnama">Nama</label>
                   <input type="text" required="required" name="nama_anggota" value="{{ $p->nama_anggota }}"class="form-control" id="exampleInputnama" placeholder="Nama Anggota">
                 </div>
-				<div class="form-group">
-                  <label for="exampleInputjk">Jenis Kelamin</label>
-                  <input type="text" required="required" name="jk_anggota" value="{{ $p->jk_anggota }}"class="form-control" id="exampleInputjk" placeholder="Jenis Kelamin">
+                <!-- select -->
+                <div class="form-group">
+                  <label>Jenis Kelamin</label>
+                  <select class="form-control">
+                    <option>Laki-laki</option>
+                    <option>Perempuan</option>
+                  </select>
                 </div>
 				<div class="form-group">
                   <label for="exampleInputjurusan">Jurusan</label>
