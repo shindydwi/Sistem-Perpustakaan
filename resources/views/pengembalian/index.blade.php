@@ -40,22 +40,20 @@
             <div class="box-body">
               <table class="table table-bordered">
                 <tr>
-                  	<th style="width: 5px">Id</th>
+                  	{{--<th style="width: 5px">Id</th>--}}
                     <th>Tanggal kembali</th>
                  	  <th>Denda</th>
                     <th>Id Buku</th>
                     <th>Id Anggota</th>
-                    <th>Id Petugas</th>
                     <th>Aksi</th>
                 </tr>
                 @foreach($pengembalian as $p)
 				<tr>
-           		    	<td>{{ $p->id_pengembalian }}</td>
+           		    	{{--<td>{{ $p->id_pengembalian }}</td>--}}
                     <td>{{ $p->tanggal_pengembalian }}</td>
                     <td>{{ $p->denda }}</td>
                     <td>{{ $p->id_buku }}</td>
-                    <td>{{ $p->id_anggota }}</td>
-                    <td>{{ $p->id_petugas }}</td>
+                    <td>{{ $p->id_anggota }}</td>                   
                     <td>
                     <a class="btn btn-warning btn-sm"href="pengembalian/edit/{{ $p->id_pengembalian }}">Edit</a>
                     <a class="btn btn-danger btn-sm"href="pengembalian/hapus/{{ $p->id_pengembalian }}">Hapus</a>

@@ -30,10 +30,10 @@
               {{ csrf_field() }}
               <input type="hidden" name="id" value="{{ $p->id_pengembalian }}"> <br/>
               <div class="box-body">
-                <div class="form-group">
+                {{--<div class="form-group">
                   <label for="exampleInputidpengembalian">Id Pengembalian</label>
                   <input type="text"required="required"name="id_pengembalian" value="{{ $p->id_pengembalian}}"class="form-control" id="exampleInputidpengembalian" placeholder="Id Pengembalian">
-                </div>
+                </div>--}}
                 <div class="form-group">
                   <label for="exampleInputtanggal">Tanggal Pengembalian</label>
                   <input type="date"required="required"name="tanggal_pengembalian" value="{{ $p->tanggal_pengembalian}}"class="form-control" id="exampleInputtanggal" placeholder="Tanggal Pengembalian">
@@ -50,10 +50,7 @@
                   <label for="exampleInputpenerbit">Id Anggota</label>
                   <input type="text"required="required"name="id_anggota" value="{{ $p->id_anggota}}"class="form-control" id="exampleInputidanggota" placeholder="Id Anggota">
                 </div>
-				<div class="form-group">
-                  <label for="exampleInputidpetugas">Id Petugas</label>
-                  <input type="text"required="required"name="id_petugas" value="{{ $p->id_petugas}}"class="form-control" id="exampleInputidpetugas" placeholder="Id Petugas">
-                </div>
+                
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan Data</button>
               </div>

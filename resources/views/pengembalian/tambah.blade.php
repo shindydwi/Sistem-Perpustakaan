@@ -38,10 +38,10 @@
 			<form action="{{ url('pengembalian/store') }}" method="post">
       {{ csrf_field() }}
               <div class="box-body">
-                <div class="form-group">
+                {{--<div class="form-group">
                   <label for="exampleInputidpengembalian">Id Pengembalian</label>
                   <input type="text" name="id_pengembalian" class="form-control" id="exampleInputidpengembalian" placeholder="Id Pengembalian">
-                </div>
+                </div>--}}
                 <div class="form-group">
                   <label for="exampleInputtanggal">Tanggal Pengembalian</label>
                   <input type="date" name="tanggal_pengembalian" class="form-control" id="exampleInputtanggal" placeholder="Tanggal Pengembalian">
@@ -49,22 +49,23 @@
 				<div class="form-group">
                   <label for="exampleInputdenda">Denda</label>
                   <input type="text" name="denda" class="form-control" id="exampleInputdenda" placeholder="denda">
-                </div>
-				<div class="form-group">
-                  <label for="exampleInputidbuku">Id Buku</label>
-                  <input type="text" name="id_buku" class="form-control" id="exampleInputidbuku" placeholder="Id Buku">
-                </div>
-				<div class="form-group">
-                  <label for="exampleInputpenerbit">Id Anggota</label>
-                  <input type="text" name="id_anggota" class="form-control" id="exampleInputidanggota" placeholder="Id Anggota">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputidpetugas">Id Petugas</label>
-                  <input type="text" name="id_petugas" class="form-control" id="exampleInputidpetugas" placeholder="Id Petugas">
-                </div>
-              <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Simpan Data</button>
-              </div>
+        </div>
+        <div class="form-group">
+                <label>Buku</label>
+                <select class="form-control" name="id_buku">
+                @foreach ($buku as $buku)
+                <option value="{{ $buku->id_buku}}">{{ $buku->judul_buku }}</option>
+                @endforeach
+              </select>
+        </div>
+        <div class="form-group">
+                <label>Anggota</label>
+                <select class="form-control" name="id_anggota">
+                @foreach ($anggota as $anggota)
+                <option value="{{ $anggota->id_anggota}}">{{ $anggota->nama_anggota }}</option>
+                @endforeach
+              </select>
+        </div>
             </form>
           </div>
           <!-- /.box -->
