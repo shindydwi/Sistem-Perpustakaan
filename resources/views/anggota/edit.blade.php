@@ -39,8 +39,8 @@
                   <input type="text" required="required" name="nama_anggota" value="{{ $p->nama_anggota }}"class="form-control" id="exampleInputnama" placeholder="Nama Anggota">
                 </div>
                 <div class="form-group">
-                  <label>Jenis Kelamin</label>
-                <select class="form-control">
+                <label>Jenis Kelamin</label>
+                <select class="form-control"name="jk_anggota">
                 <option value="Laki-laki">Laki-laki</option>
                 <option value="Perempuan">Perempuan</option>
               </select>

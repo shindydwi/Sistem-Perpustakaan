@@ -142,6 +142,13 @@
           </a>
         </li>
         <li>
+          <a href="{{ url('users')}}">
+            <i class="fa fa-th"></i> <span>Users</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
+        <li>
           <a href="{{ url('buku')}}">
             <i class="fa fa-th"></i> <span>Buku</span>
             <span class="pull-right-container">
@@ -156,15 +163,16 @@
           </a>
         </li>/.sidebar -->
         <li>
-          <a href="{{ url('anggota')}}">
-            <i class="fa fa-th"></i> <span>Anggota</span>
+
+          <a href="{{ url('rak')}}">
+            <i class="fa fa-th"></i> <span>Rak</span>
             <span class="pull-right-container">
             </span>
           </a>
         </li>
         <li>
-          <a href="{{ url('rak')}}">
-            <i class="fa fa-th"></i> <span>Rak</span>
+          <a href="{{ url('anggota')}}">
+            <i class="fa fa-th"></i> <span>Anggota</span>
             <span class="pull-right-container">
             </span>
           </a>
@@ -183,13 +191,7 @@
             </span>
           </a>
         </li>
-        <li>
-          <a href="{{ url('users')}}">
-            <i class="fa fa-th"></i> <span>Users</span>
-            <span class="pull-right-container">
-            </span>
-          </a>
-        </li>
+
     </section>
    
   </aside>

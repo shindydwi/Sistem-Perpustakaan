@@ -58,7 +58,7 @@
                   <label for="exampleInputpenerbit">Id Anggota</label>
                   <input type="text" name="id_anggota" class="form-control" id="exampleInputidanggota" placeholder="Id Anggota">
                 </div>
-				<div class="form-group">
+                <div class="form-group">
                   <label for="exampleInputidpetugas">Id Petugas</label>
                   <input type="text" name="id_petugas" class="form-control" id="exampleInputidpetugas" placeholder="Id Petugas">
                 </div>

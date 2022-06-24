@@ -45,9 +45,9 @@
                   <label for="exampleInputNama">Nama</label>
                   <input type="text" name="nama_anggota" class="form-control" id="exampleInputNama" placeholder="Nama Anggota">
                 </div>
-                  <div class="form-group">
-                  <label>Jenis kelamin</label>
-                <select class="form-control">
+                <div class="form-group">
+                <label>Jenis Kelamin</label>
+                <select class="form-control" name="jk_anggota">
                 <option value="Laki-laki">Laki-laki</option>
                 <option value="Perempuan">Perempuan</option>
               </select>
