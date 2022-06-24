@@ -57,7 +57,7 @@ class PengembalianController extends Controller
     	 // method untuk edit data pengembalian
 	 public function edit($id)
 	 {
-		 // mengambil data pengembalian berdasarkan id yang dipilih
+
 		 $pengembalian = DB::table('pengembalian')->where('id_pengembalian',$id)->get();
 		 // passing data pengembalian yang didapat ke view edit.blade.php
 		 //return view('pengembalian.edit',['pengembalian' => $pengembalian]);
