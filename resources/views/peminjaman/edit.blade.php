@@ -59,10 +59,7 @@
                 @endforeach
               </select>
         </div>>
-				{{--<div class="form-group">
-                  <label for="exampleInputidpetugas">Id Petugas</label>
-                  <input type="text"required="required"name="id_petugas" value="{{ $p->id_petugas}}"class="form-control" id="exampleInputidpetugas" placeholder="Id Petugas">
-                </div>--}}
+
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan Data</button>
               </div>

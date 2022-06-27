@@ -42,7 +42,7 @@
                   <th>Tanggal Kembali</th>
 				          <th>Id Buku</th>
 				          <th>Id Anggota </th>
-				          {{}}--<th>Id Petugas</th>--}}
+                  
 				          <th>Aksi</th>
                 </tr>
 				@foreach($peminjaman as $p)
@@ -52,7 +52,7 @@
                 <td>{{ $p->tanggal_kembali }}</td>
                 <td>{{ $p->id_buku }}</td>
                 <td>{{ $p->id_anggota }}</td>
-                {{--<td>{{ $p->id_petugas }}</td>--}}
+
                 <td>
                 <a class="btn btn-warning btn-sm"href="peminjaman/edit/{{ $p->id_peminjaman }}">Edit</a>
                 <a class="btn btn-danger btn-sm"href="peminjaman/hapus/{{ $p->id_peminjaman}}">Hapus</a>

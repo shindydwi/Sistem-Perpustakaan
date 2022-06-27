@@ -38,7 +38,7 @@
 			<form action="{{ url('peminjaman/store') }}" method="post">
       {{ csrf_field() }}
               <div class="box-body">
-                {{}}--<div class="form-group">
+                {{--<div class="form-group">
                   <label for="exampleInputId">Id Peminjaman</label>
                   <input type="text" name="id_peminjaman" class="form-control" id="exampleInputId" placeholder="Id Peminjaman">
                 </div>--}}
@@ -66,10 +66,7 @@
                 @endforeach
               </select>
               </div>
-				{{--<div class="form-group">
-                  <label for="exampleInputidpetugas">Id Petugas</label>
-                  <input type="text" name="id_petugas" class="form-control" id="exampleInputidpetugas" placeholder="Id Petugas">
-                </div>--}}
+
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan Data</button>
               </div>
