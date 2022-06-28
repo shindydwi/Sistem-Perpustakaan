@@ -63,7 +63,7 @@
               <span class="hidden-xs">Shindy Dwi Aulya</span>
             </a>
             <ul class="dropdown-menu">
-              <!-- User image -->
+              
               <li class="user-header">
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
@@ -72,7 +72,7 @@
                   <small>Member since May. 2022</small>
                 </p>
               </li>
->
+
                 <div class="pull-right">
                   <a class="btn btn-default btn-flat" href="{{ route('logout') }}"
                      onclick="event.preventDefault();
