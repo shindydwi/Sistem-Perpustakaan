@@ -42,14 +42,22 @@
                   <label for="exampleInputdenda">Denda</label>
                   <input type="text"required="required"name="denda" value="{{ $p->denda }}"class="form-control" id="exampleInputdenda" placeholder="denda">
                 </div>
-				<div class="form-group">
-                  <label for="exampleInputidbuku">Id Buku</label>
-                  <input type="text"required="required"name="id_buku" value="{{ $p->id_buku}}"class="form-control" id="exampleInputidbuku" placeholder="Id Buku">
-                </div>
-				<div class="form-group">
-                  <label for="exampleInputpenerbit">Id Anggota</label>
-                  <input type="text"required="required"name="id_anggota" value="{{ $p->id_anggota}}"class="form-control" id="exampleInputidanggota" placeholder="Id Anggota">
-                </div>
+        <div class="form-group">
+                <label>Buku</label>
+                <select class="form-control" name="id_buku">
+                @foreach ($buku as $buku)
+                <option value="{{ $buku->id_buku}}">{{ $buku->judul_buku }}</option>
+                @endforeach
+              </select>
+        </div>
+        <div class="form-group">
+                <label>Anggota</label>
+                <select class="form-control" name="id_anggota">
+                @foreach ($anggota as $anggota)
+                <option value="{{ $anggota->id_anggota}}">{{ $anggota->nama_anggota }}</option>
+                @endforeach
+              </select>
+        </div>
                 
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan Data</button>

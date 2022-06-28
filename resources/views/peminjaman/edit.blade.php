@@ -50,7 +50,7 @@
                 <option value="{{ $buku->id_buku}}">{{ $buku->judul_buku }}</option>
                 @endforeach
               </select>
-        </div>
+              </div>
         <div class="form-group">
                 <label>Anggota</label>
                 <select class="form-control" name="id_anggota">
@@ -58,7 +58,7 @@
                 <option value="{{ $anggota->id_anggota}}">{{ $anggota->nama_anggota }}</option>
                 @endforeach
               </select>
-        </div>>
+              </div>
 
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan Data</button>

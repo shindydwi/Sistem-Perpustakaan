@@ -59,6 +59,8 @@ class PengembalianController extends Controller
 	 {
 
 		 $pengembalian = DB::table('pengembalian')->where('id_pengembalian',$id)->get();
+		 $buku = DB::table('buku')->where('id_buku',$id)->get();
+		 $anggota = DB::table('anggota')->where('id_anggota',$id)->get();
 		 // passing data pengembalian yang didapat ke view edit.blade.php
 		 //return view('pengembalian.edit',['pengembalian' => $pengembalian]);
 		 return view('pengembalian.edit',compact('pengembalian','buku','anggota'));
